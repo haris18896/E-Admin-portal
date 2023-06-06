@@ -1,0 +1,31 @@
+.head {
+  &--tabs {
+    padding: 0.5rem 1rem;
+
+    @include breakpoint-up(xxxSmall) {
+      padding: 0.5rem 2rem;
+
+    }
+
+    & span {
+      cursor: pointer;
+      padding: 5px 10px;
+
+      &:not(:last-child) {
+        margin-left: 5px;
+      }
+
+      @include breakpoint-up(xSmall) {
+        padding: 5px 1.5rem;
+      }
+
+      @include breakpoint-down(xxSmall) {
+        font-size: 12px;
+      }
+    }
+
+    &__selected {
+      border-bottom: 3px solid $ethera-text-color !important;
+    }
+  }
+}

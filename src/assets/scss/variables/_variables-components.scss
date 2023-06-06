@@ -1,0 +1,137 @@
+//  ================================================================================================
+//  ? TIP:  It is recommended to use this file for overriding component variables.
+//  ================================================================================================
+
+$white: #fff !default;
+$gray-50: #f6f6f6 !default;
+$gray-100: #babfc7 !default; // $gray-lightest
+$gray-200: #ededed !default; // $gray-lighter
+$gray-300: #dae1e7 !default; // $gray-light
+$gray-400: #636363 !default;
+$gray-500: #adb5bd !default;
+$gray-600: #b8c2cc !default; // $gray
+$gray-700: #4e5154 !default;
+$gray-800: #1e1e1e !default; // $gray-dark
+$gray-900: #2a2e30 !default;
+$black: #22292f !default; // 231f48 22292f
+$tele-provider-gray: #cfd8e5;
+$tele-provider-gray-dark: #363b40;
+
+$ethera-dark-selected: #323a50 !default;
+
+
+$badgeUpcoming: #cfd8e6 !default;
+$brand-text: #a6a6a6 !default;
+$ethera-selected: #e2dbc8 !default; // e2dbc8
+$bg-ethera: #fefbf4 !default; //#fefbf4
+$ethera-text-color: #783e34 !default; // #783e34
+$etheraHeader: #f2f2f2 !default; // #f2f2f2
+$ether-calendar-active: #45556f !default;
+$ethera-gray: #9f9f9f !default;
+$ethera-gray-dark: #9faaca !default;
+$ethera-gray-text: #47556C !default;
+$ethera-gray: #758cb8 !default;
+$ethera-dark-brown: #e8ddcb !default;
+$ethera-brown: #aa9779 !default;
+$ethera-gray-light: #d0d8e5 !default;
+$ethera-YTD-head: #e5e3d7 !default;
+$ethera-income-head: #f5f5f5 !default;
+$ethera-project-head: #d1d8e5 !default;
+$ethera-golden: #fba708 !default;
+$ethera-yellow: #f5dd97 !default;
+$black: #000 !default;
+$white: #fff !default;
+$bg-dark: #283046 !default;
+$ethera-brick: #dc8886 !default;
+$ethera-brick-dark: #733232 !default;
+$ethera-edit-card-color : #4c596e !default;
+$ethera-yellow-light: #fff9ef !default;
+$ethera-yellow-border: #e3cfc0 !default;
+$ethera-show: #F0F0F0 !default;
+$ethera-system-settings-bg: #FAFAFA !default;
+
+$ethera-gray-text: #b4b4b4 !default;
+$ethera-blue: #79A5CA !default;
+
+$ethera-btn-gray: #D0D8E5 !default;
+
+$ethera-green: #a8b482 !default;
+$button-green: #6b9879 !default;
+$ethera-button-secondary: #fff9f0 !default;
+
+$text-icon-border: #5a606a !default;
+
+$ethera-link: #4FA0DD !default;
+$isaac: #A8B581 !default;
+$oc : #E69C82 !default;
+$irvine : #A0A9CA !default;
+
+$ethera-unselect-tag: #D8B67C !default;
+$ethera-select-tag: #1072C7 !default;
+
+$purple: #7367f0 !default; //$primary
+$green: #4CBD3B !default; //$success
+$blue: #00cfe8 !default; //$info
+$orange: #ff9f43 !default; //$warning
+$red: #ea5455 !default; //$danger
+$badgeGreen: #c8f9c1 !default;
+
+$primary: $ethera-selected !default;
+$secondary: #82868b !default;
+$success: $green !default;
+$danger: $red !default;
+$info: $blue !default;
+$warning: $orange !default;
+$light: $gray-50 !default;
+$dark: #4b4b4b !default;
+$badge-upcoming: #cfd8e6 !default;
+
+// paddings
+$selectorPaddings: 7px 10px;
+$button-green-padding: 8px 15px 8px 40px;
+$header-side-paddings: 0px 25px;
+$tag-padding: 0.5rem 1rem;
+$text-icon-padding: 0.4rem 1rem;
+$btn-med-padding: 0.6rem 1.5rem;
+$btn-sm-padding: 6px 15px;
+$btn-padding: 6px 1.6rem;
+$btn-sm-padding-without-icon: 0.5rem 1.5rem;
+
+//margins
+$margin-0: 2px !default;
+$margin-1: 4px !default;
+$margin-2: 8px !default;
+$margin-3: 12px !default;
+$margin-4: 16px !default;
+$margin-5: 20px !default;
+$margin-6: 24px !default;
+$margin-7: 28px !default;
+$margin-8: 32px !default;
+$margin-9: 36px !default;
+$margin-10: 40px !default;
+$margin-11: 50px !default;
+
+// font -sizes
+$font-size-xs: 10px !default;
+$font-size-sm: 12px !default;
+$font-size-md: 14px !default;
+$font-size-lg: 16px !default;
+
+$font-size-h1: 32px !default;
+$font-size-h2: 28px !default;
+$font-size-h3: 24px !default;
+$font-size-h4: 20px !default;
+$font-size-h5: 18px !default;
+
+$font-size-x-small : 10px;
+$font-size-small : 12px;
+$font-size-s-med : 14px;
+$font-size-med : 16px;
+$font-size-l-med : 18px;
+$font-size-large : 20px;
+$font-size-x-large: 22px;
+$font-size-xx-large: 24px;
+$font-size-xxx-large: 26px;
+
+
+

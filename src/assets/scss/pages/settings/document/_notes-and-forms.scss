@@ -1,0 +1,305 @@
+.notes-and-forms {
+  &--tabs {
+    // @include flex-between-center;
+    @include flex-start-center;
+    flex-direction: column-reverse;
+    @include breakpoint-up(xSmall) {
+      @include flex-row;
+      justify-content: space-between;
+    }
+
+    &__tab {
+      @include flex-center;
+      padding: 0;
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+      & span {
+        padding: 10px !important;
+        font-size: 12px;
+        &:first-child {
+          margin-right: 10px;
+        }
+
+        @include breakpoint-up(xxxSmall) {
+          font-size: 14px;
+        }
+
+        @include breakpoint-up(xSmall) {
+          padding: 0.6rem 1rem !important;
+        }
+
+        @include breakpoint-up(medLg) {
+          padding: 0.6rem 1.5rem !important;
+        }
+      }
+    }
+
+    &__buttons {
+      margin-right: 1rem;
+      @include flex-start-center;
+      flex-direction: column-reverse;
+      @include breakpoint-up(small) {
+        @include flex-row;
+      }
+      @include breakpoint-down(xSmall) {
+        width: 100%;
+      }
+
+      & button {
+        padding: 0.4rem 4rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        @include breakpoint-down(xSmall) {
+          width: -webkit-fill-available;
+        }
+      }
+    }
+  }
+
+  &--list {
+    @include flex-center-start;
+    @include flex-column;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 2rem;
+
+    @include breakpoint-up(xSmall) {
+      @include flex-row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__edit {
+      & svg {
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+      }
+    }
+  }
+}
+
+.other-document {
+  &--addFolder {
+    width: 100%;
+
+    padding: 5px 1.5rem;
+
+    & span {
+      font-weight: 400;
+    }
+  }
+
+  &--requiredText {
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    & span {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background-color: red;
+        border-radius: 20px;
+        top: 3px;
+        left: -7px;
+      }
+    }
+  }
+}
+
+.template-table {
+  margin: 1rem 0;
+
+  &--header,
+  & th {
+    padding: 1.4rem 2rem !important;
+    font-weight: 400 !important;
+    white-space: nowrap !important;
+    font-size: 13px !important;
+
+    @include breakpoint-up(xxxSLarge) {
+      font-size: 15px !important;
+    }
+  }
+
+  &--body {
+
+    & p {
+      @include breakpoint-up(xxxSLarge) {
+        font-size: 17px !important;
+      }
+    }
+
+    &__bars {
+      color: rgba(gray, 0.6);
+    }
+
+    &__Button {
+      margin: 2rem 2rem 1rem 2rem;
+
+      & button {
+        width: 100%;
+        padding: 0.5rem 5rem;
+
+        @include breakpoint-up(xxxSmall) {
+          width: fit-content;
+        }
+      }
+    }
+  }
+
+  &--Form {
+    @include flex-center-start;
+    @include flex-column;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    width: 100%;
+
+    &__addMore {
+      width: 100%;
+
+      @include breakpoint-up(xxSmall) {
+        width: fit-content;
+      }
+    }
+
+    &__questionType {
+      @include flex-start-center;
+      width: -webkit-fill-available;
+
+      & svg {
+        color: #454d4e;
+      }
+    }
+
+    &__question {
+      width: 100%;
+    }
+
+    &__answer {
+      width: -webkit-fill-available;
+
+      &--longAnswer {
+        @include flex-start-center;
+        @include flex-column;
+        margin-bottom: 1rem;
+
+        & svg {
+          color: #454d4e;
+          align-self: flex-end;
+        }
+
+        &__selectors {
+          @include flex-start-center;
+          @include flex-column;
+          width: 100%;
+          & section {
+            width: 100%;
+          }
+        }
+
+        &__detail {
+          width: 100%;
+          @include flex-start-center;
+          @include flex-column;
+
+          & section {
+            width: 100%;
+          }
+        }
+
+        @include breakpoint-up(small) {
+          @include flex-row;
+          align-items: center;
+          justify-content: flex-start;
+          margin-bottom: 0;
+
+          &__trash {
+            margin-bottom: 1rem;
+          }
+
+          & svg {
+            align-self: center;
+          }
+          &__selectors {
+            margin-right: 1rem;
+            @include flex-row;
+            justify-content: space-between;
+            align-items: center;
+            width: fit-content;
+            & section {
+              width: 100%;
+              &:not(:last-child) {
+                margin-right: 1rem;
+              }
+            }
+          }
+
+          &__detail {
+            @include flex-row;
+            & section {
+              margin-right: 2rem;
+            }
+          }
+        }
+      }
+    }
+
+    &__actions {
+      @include flex-center-start;
+      @include flex-column;
+      width: 100%;
+      &__checkbox {
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        & div:first-child {
+          margin-bottom: 0px !important;
+        }
+      }
+      &__buttons {
+        @include flex-start-center;
+        width: -webkit-fill-available;
+        & button {
+          width: 100%;
+        }
+        & button:first-child {
+          margin-right: 1rem;
+        }
+      }
+
+      @include breakpoint-up(xxSmall) {
+        @include flex-row;
+        align-items: center;
+        justify-content: space-between;
+        &__checkbox {
+          margin-bottom: 0;
+        }
+        &__buttons {
+          width: fit-content;
+        }
+      }
+    }
+
+    @include breakpoint-up(medLg) {
+      width: 80%;
+    }
+
+    @include breakpoint-up(xxLarge) {
+      margin-left: 9rem;
+      max-width: 800px;
+    }
+
+    @include breakpoint-up(xxxSLarge) {
+      margin-left: 12rem;
+      max-width: 900px;
+    }
+  }
+}

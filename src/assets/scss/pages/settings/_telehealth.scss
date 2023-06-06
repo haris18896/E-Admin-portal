@@ -1,0 +1,103 @@
+.tele-provider {
+  display: flex;
+  align-items: center;
+  background-color: $tele-provider-gray;
+  gap: 1rem;
+  border-radius: 0px 0.5rem 0.5rem 0px;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  .source {
+    display: flex;
+    border-right: 1px solid gray;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1rem;
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+    p {
+      margin: 0;
+      color: #000;
+    }
+  }
+  .source-detail {
+    display: flex;
+    flex: 0.7;
+    padding: 0.5rem;
+    align-items: center;
+    .source-status {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      gap: 1rem;
+      p {
+        margin: 0;
+        strong {
+          white-space: nowrap;
+          color: #000;
+        }
+      }
+      img {
+        width: 2rem;
+        background-color: transparent;
+      }
+
+      &--not_connected {
+        background-color: #fefefe;
+        cursor: pointer;
+        border-radius: 20px;
+        border: 1px solid rgba(black, 0.5);
+        margin-right: 10px;
+        width: fit-content;
+        padding: 5px 0.8rem;
+        @include breakpoint-up(xxSmall) {
+          padding: 5px 3rem;
+        }
+      }
+    }
+  }
+  .edit-button {
+    cursor: pointer;
+    padding: 0rem 0.8rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    border: 1px solid gray;
+    width: auto;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .border-none {
+    border: none;
+  }
+  .bgRadious {
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  .flex-03 {
+    flex: 0.3;
+  }
+
+  @include breakpoint-down(small) {
+    gap: 0.3rem;
+    .source {
+      flex-direction: column;
+      p {
+        font-size: 0.8rem;
+      }
+    }
+    .source-status {
+      p {
+        margin: 0;
+        font-size: 0.8rem;
+      }
+      img {
+        width: 3rem;
+      }
+    }
+    .edit-button {
+      padding: 0.35rem 0.7rem;
+    }
+  }
+}

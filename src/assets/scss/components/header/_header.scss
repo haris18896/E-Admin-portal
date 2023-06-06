@@ -1,0 +1,86 @@
+.page-header {
+  @include flex-center-start;
+  @include flex-column;
+
+  &--title {
+    margin-bottom: 1rem;
+    &__leftArrow {
+      color: $ethera-text-color;
+      cursor: pointer;
+      transition: transform 250ms;
+
+      &:hover {
+        transform: translateX(-5px);
+      }
+    }
+  }
+
+  &--buttons_right {
+    width: 100%;
+
+    & button {
+      width: 100%;
+    }
+
+    @include breakpoint-up(xSmall) {
+      @include flex-center-start;
+      margin-top: 0;
+      justify-content: flex-end;
+      width: fit-content;
+
+      & select {
+        min-width: 180px;
+      }
+
+      & button {
+        width: fit-content;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &--selects {
+    @include flex-end-center;
+
+    & div {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+
+  &--export {
+    width: 100%;
+    margin-top: 1rem;
+
+    & button {
+      width: 100%;
+    }
+
+    @include breakpoint-up(xSmall) {
+      width: fit-content;
+      margin-top: 0;
+    }
+  }
+
+  &--bottom_date {
+    width: 100%;
+    padding-right: 5px;
+
+    @include breakpoint-up(xSmall) {
+      width: fit-content;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding-right: 2rem;
+    }
+
+    @include breakpoint-up(small) {
+      padding-right: 3rem;
+    }
+  }
+
+  @include breakpoint-up(xSmall) {
+    @include flex-row;
+    align-items: center;
+    // justify-content: space-between;
+  }
+}

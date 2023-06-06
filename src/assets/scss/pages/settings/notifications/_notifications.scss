@@ -1,0 +1,19 @@
+.settings {
+  &--footer {
+    @include flex-start-center;
+
+    & button {
+      &:first-child {
+        padding: $btn-sm-padding;
+      }
+
+      &:last-child {
+        padding: $btn-padding;
+
+        & svg {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

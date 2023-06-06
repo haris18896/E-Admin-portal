@@ -1,0 +1,186 @@
+// Headings
+.gray {
+  color: rgb(97, 96, 96) !important;
+}
+
+.heading-1 {
+  font-size: 20px !important;
+  font-weight: bold;
+
+  @include breakpoint-up(xSmall) {
+    font-size: 28px !important;
+  }
+}
+
+.heading-2 {
+  font-size: 16px;
+  font-weight: 700;
+
+  @include breakpoint-up(xxSmall) {
+    font-size: 22px;
+  }
+}
+
+.heading-3 {
+  font-size: 14px;
+  font-weight: 600;
+
+  @include breakpoint-up(xxSmall) {
+    font-size: 20px;
+  }
+}
+
+.heading-4 {
+  font-size: 12px;
+  font-weight: 500;
+
+  @include breakpoint-up(xxSmall) {
+    font-size: 18px;
+  }
+}
+
+.heading-5 {
+  font-size: 12px;
+  font-weight: 700;
+
+  @include breakpoint-up(xxSmall) {
+    font-size: 16px;
+  }
+}
+
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4,
+.heading-5,
+.sub-heading-1,
+.sub-heading-2 {
+  color: $black;
+}
+
+// Sub-heading
+.sub-heading-1 {
+  font-size: 14px !important;
+
+  @include breakpoint-up(xxSmall) {
+    font-size: 18px !important;
+  }
+}
+
+.sub-heading-2 {
+  font-size: 10px !important;
+
+  @include breakpoint-up(xxSmall) {
+    font-size: 14px !important;
+  }
+}
+// spans
+.span-tabs {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.p-heading-2 {
+  font-size: 10px;
+
+  @include breakpoint-up(xxSmall) {
+    font-size: 14px;
+  }
+}
+
+.label-2 {
+  // color: $black;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+// Tables
+
+// buttons
+.f-export {
+  font-size: 15px !important;
+}
+
+// font-weights
+.f-semi {
+  font-weight: semi-bold !important;
+}
+
+.f-bold {
+  font-weight: bold !important;
+}
+
+.f-e-bold {
+  font-weight: extra-bold !important;
+}
+
+.f-400 {
+  font-weight: 400 !important;
+}
+
+.f-800 {
+  font-weight: 800 !important;
+}
+
+.f-700 {
+  font-weight: 700 !important;
+}
+
+// font-sizes
+
+.fs-x-small {
+  // 10px
+  font-size: $font-size-x-small;
+}
+
+.fs-small {
+  // 12px
+  font-size: $font-size-small;
+}
+
+.fs-s-med {
+  // 14px
+  font-size: $font-size-s-med;
+}
+
+.fs-med {
+  // 16px
+  font-size: $font-size-med;
+}
+
+.fs-l-med {
+  // 18px
+  font-size: $font-size-l-med;
+}
+
+.fs-large {
+  // 20px
+  font-size: $font-size-large;
+}
+
+.fs-x-large {
+  // 22px
+  font-size: $font-size-x-large;
+}
+
+.fs-xx-large {
+  // 24px
+  font-size: $font-size-xx-large;
+}
+
+.fs-xxx-large {
+  // 26px
+  font-size: $font-size-xxx-large;
+}
+
+.f-calendar-small {
+  font-size: 8px !important;
+
+  @include breakpoint-up(xSmall) {
+    font-size: 10px !important;
+  }
+
+  @include breakpoint-up(med) {
+    font-size: 12px !important;
+  }
+}

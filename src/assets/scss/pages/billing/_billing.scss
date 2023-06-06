@@ -1,0 +1,72 @@
+.billing {
+  &--header {
+    @include flex-start-center;
+    @include flex-column;
+
+    &__left {
+      width: 100%;
+      &--select-field{
+        position: relative !important
+      }
+    }
+
+    &__right {
+      @include flex-start-center;
+      @include flex-column;
+      width: 100%;
+
+      & button {
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
+    @include breakpoint-down(xxSmall) {
+      &__left {
+          margin-right: 9px !important;
+          margin-left: -1px !important;
+      }
+    }
+
+    @include breakpoint-up(xxSmall) {
+        &__left {
+            @include flex-center-start;
+        }
+
+        &__right {
+            align-items: center;
+            justify-content: flex-start;
+            @include flex-row;
+
+            & button {
+                margin: 0 0 0 1rem;
+            }
+        }
+    }
+
+    @include breakpoint-up(small) {
+        @include flex-row;
+        align-items: center;
+        justify-content: flex-start;
+
+        &__left {
+            width: fit-content;
+            & div {
+                margin-bottom: 0;
+            }
+        }
+
+        &__right {
+            justify-content: space-between;
+
+            &__search {
+                max-width: 300px;
+                margin-left: 10px;
+            }
+
+            & button {
+                width: fit-content;
+            }
+        }
+    }
+  }
+}

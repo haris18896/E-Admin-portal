@@ -1,0 +1,39 @@
+.template-card {
+  width: auto;
+  min-height: 350px;
+  border: 1px solid black;
+  border-radius: 25px;
+
+  p {
+    margin: 0;
+  }
+
+  .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    min-height: 120px;
+    .head-row {
+      display: flex;
+      span {
+        flex: 0.3;
+        padding-left: 2rem;
+        font-weight: bold;
+        color: $black;
+      }
+      p {
+        flex: 1;
+      }
+      div {
+        flex: 1;
+      }
+    }
+  }
+  hr {
+    margin: 0;
+    border: 1px solid #888;
+  }
+}
+
+

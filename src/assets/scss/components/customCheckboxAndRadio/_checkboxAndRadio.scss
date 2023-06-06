@@ -1,0 +1,12 @@
+.form-check-input:checked[type=checkbox] {
+    background-color: transparent !important;
+    background-image: url('../../../images/svg/tick.svg') !important;
+}
+
+.form-check-input:checked[type=radio] {
+    width: 1rem !important;
+    height: 1rem !important;
+    background-color: $ethera-text-color !important;
+    border: 2px solid $white !important;
+    outline: 1px solid $ethera-text-color !important;
+}

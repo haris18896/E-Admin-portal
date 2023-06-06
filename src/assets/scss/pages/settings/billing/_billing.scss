@@ -1,0 +1,27 @@
+.billing {
+  &--bills_form {
+    @include breakpoint-up(med) {
+      max-width: 60%;
+    }
+
+    &--table_row {
+      @include flex-between-center;
+
+      &--icons {
+        & svg {
+          margin-left: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    &__payment {
+        & button {
+            padding: 0.5rem 2rem;
+            & span {
+                margin-left: 8px;
+            }
+        }
+    }
+  }
+}

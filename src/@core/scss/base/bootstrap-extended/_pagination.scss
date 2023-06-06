@@ -1,0 +1,363 @@
+// Pagination
+
+// default look for page item, first and last item
+
+.page-item {
+  border-radius: 5rem;
+  background-color: transparent !important;
+
+  &:not(.prev-item),
+  &:not(.next-item),
+  &:not(.first),
+  &:not(.last),
+  &:not(.active) {
+    .page-link {
+      background-color: transparent !important;
+
+      line-height: 1.3;
+    }
+  }
+
+  .page-link {
+    background-color: transparent !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &.previous,
+  &.prev,
+  &.next,
+  &.first,
+  &.last {
+    .page-link {
+      width: auto;
+    }
+  }
+
+  &.prev-item,
+  &.next-item {
+    .page-link {
+      transition: all 0.2s ease-out;
+    }
+  }
+
+  // prev and next item separated styles
+  &.prev-item {
+    margin-right: 0.3571rem;
+
+    .page-link {
+      border-radius: 50%;
+
+      &:before {
+        background-image: url(str-replace(str-replace($chevron-left, "currentColor", $pagination-color), "#", "%23"));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 14px;
+        background-color: transparent !important;
+
+        color: $body-color;
+        width: 8px;
+        height: 18px;
+        content: "";
+      }
+
+      &:hover {
+        background-color: transparent !important;
+        background: $pagination-hover-bg;
+        color: $pagination-hover-color;
+      }
+      &:active,
+      &:hover {
+        background-color: $primary !important;
+        &:before {
+          background-color: transparent !important;
+
+          background-image: url(str-replace(str-replace($chevron-left, "currentColor", $white), "#", "%23")) !important;
+        }
+      }
+    }
+    &.disabled {
+      .page-link {
+        &:before {
+          background-color: transparent !important;
+
+          background-image: url(str-replace(
+            str-replace($chevron-left, "currentColor", $pagination-disabled-color),
+            "#",
+            "%23"
+          ));
+        }
+      }
+    }
+
+    & ~ .page-item:nth-child(2) {
+      border-top-left-radius: 5rem;
+      border-bottom-left-radius: 5rem;
+      .page-link {
+        border-top-left-radius: 5rem !important;
+        // border-bottom-left-radius: 5rem !important;
+      }
+    }
+
+    & ~ .page-item:nth-last-child(2) {
+      border-top-right-radius: 5rem;
+      border-bottom-right-radius: 5rem;
+      .page-link {
+        border-top-right-radius: 5rem !important;
+        // border-bottom-right-radius: 5rem !important;
+      }
+    }
+  }
+
+  &.next-item {
+    margin-left: 0.3571rem;
+
+    .page-link {
+      border-radius: 50%;
+
+      &:after {
+        background-color: transparent !important;
+
+        background-image: url(str-replace(str-replace($chevron-right, "currentColor", $pagination-color), "#", "%23"));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 14px;
+        width: 8px;
+        height: 18px;
+        content: "";
+      }
+
+      &:hover {
+        background: $pagination-hover-bg;
+        color: $pagination-hover-color;
+      }
+      &:active,
+      &:hover {
+        background-color: $primary !important;
+        &:after {
+          background-color: transparent !important;
+
+          background-image: url(str-replace(
+            str-replace($chevron-right, "currentColor", $white),
+            "#",
+            "%23"
+          )) !important;
+        }
+      }
+    }
+    &.disabled {
+      .page-link {
+        &:after {
+          background-color: transparent !important;
+
+          background-image: url(str-replace(
+            str-replace($chevron-right, "currentColor", $pagination-disabled-color),
+            "#",
+            "%23"
+          ));
+        }
+      }
+    }
+  }
+
+  // prev and next style
+  &.prev,
+  &.previous {
+    .page-link {
+      &:before {
+        background-color: transparent !important;
+
+        background-image: url(str-replace(str-replace($chevron-left, "currentColor", $pagination-color), "#", "%23"));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 14px;
+        background-color: transparent !important;
+        color: $body-color;
+        width: 12px;
+        height: 18px;
+        content: "";
+      }
+      // &:active,
+      &:hover {
+        &:before {
+          background-color: transparent !important;
+
+          background-image: url(str-replace(
+            str-replace($chevron-left, "currentColor", $pagination-active-color),
+            "#",
+            "%23"
+          )) !important;
+        }
+      }
+    }
+    &.disabled {
+      background-color: transparent !important;
+
+      .page-link {
+        &:before {
+          background-color: transparent !important;
+
+          background-image: url(str-replace(
+            str-replace($chevron-left, "currentColor", $pagination-disabled-color),
+            "#",
+            "%23"
+          ));
+        }
+      }
+    }
+  }
+  &.next {
+    background-color: transparent !important;
+
+    .page-link {
+      &:after {
+        background-color: transparent !important;
+
+        // background-image: url(str-replace(str-replace($chevron-right, 'currentColor', $pagination-color), '#', '%23'));
+        background-image: url(str-replace(str-replace($chevron-right, "currentColor", $pagination-color), "#", "%23"));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 14px;
+        color: $body-color;
+        width: 12px;
+        height: 18px;
+        content: "";
+      }
+      // &:active,
+      &:hover {
+        &:after {
+          background-color: transparent !important;
+
+          background-image: url(str-replace(
+            str-replace($chevron-right, "currentColor", $primary),
+            "#",
+            "%23"
+          )) !important;
+        }
+      }
+    }
+    &.disabled {
+      .page-link {
+        &:after {
+          background-color: transparent !important;
+
+          background-image: url(str-replace(
+            str-replace($chevron-right, "currentColor", $pagination-disabled-color),
+            "#",
+            "%23"
+          ));
+        }
+      }
+    }
+  }
+
+  &.disabled {
+    .page-link {
+      background-color: transparent !important;
+
+      color: $pagination-disabled-color;
+    }
+  }
+
+  // page link customization
+
+  .page-link {
+    margin: 0;
+    margin-left: 0;
+    font-size: 1rem;
+    min-width: 2.286rem;
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  // for active page item
+  &.active {
+    // background-color: $pagination-bg;
+    background-color: transparent !important;
+    border-radius: 0;
+
+    .page-link {
+      z-index: 3;
+      // border-radius: 5rem;
+      background-color: transparent !important;
+      border-bottom: 2px solid $ether-calendar-active !important;
+      border-bottom-width: 80% !important;
+      color: $ether-calendar-active !important;
+      font-weight: 700;
+      font-size: 12px;
+      margin: 0px 5px;
+    }
+  }
+
+  // if you don't want separated look
+
+  &:first-child:not(.prev-item) {
+    &.active {
+      border-top-left-radius: 1.428rem;
+      border-bottom-left-radius: 1.428rem;
+      .page-link {
+        border-radius: 5rem;
+      }
+    }
+    .page-link {
+      border-top-left-radius: 1.428rem;
+      border-bottom-left-radius: 1.428rem;
+    }
+  }
+
+  &:last-child:not(.next-item) {
+    &.active {
+      border-top-right-radius: 1.428rem;
+      border-bottom-right-radius: 1.428rem;
+      .page-link {
+        border-radius: 5rem;
+      }
+    }
+    .page-link {
+      border-top-right-radius: 1.428rem;
+      border-bottom-right-radius: 1.428rem;
+    }
+  }
+}
+
+// For Pagination Font sizes
+.pagination {
+  // For Pagination lg
+  &.pagination-lg {
+    .page-item {
+      .page-link {
+        font-size: $pagination-font-size-lg;
+        min-width: 2.6rem;
+        // &:hover {
+        //   border-top-left-radius: 0px !important;
+        //   border-bottom-left-radius: 0px !important;
+
+        //   border-top-right-radius: 3rem !important;
+        //   border-bottom-right-radius: 3rem !important;
+        // }
+      }
+    }
+  }
+  // For Pagination sm
+  &.pagination-sm {
+    .page-item {
+      .page-link {
+        font-size: $pagination-font-size-sm;
+        min-width: 2rem;
+        // &:hover {
+        //   border-top-left-radius: 0px !important;
+        //   border-bottom-left-radius: 0px !important;
+
+        //   border-top-right-radius: 3rem !important;
+        //   border-bottom-right-radius: 3rem !important;
+        // }
+      }
+    }
+  }
+}

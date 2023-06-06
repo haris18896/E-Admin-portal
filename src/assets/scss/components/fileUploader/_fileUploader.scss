@@ -1,0 +1,108 @@
+.imageUploader {
+  cursor: pointer;
+  padding-top: 2rem !important;
+  border: 1px dashed rgba(0, 0, 0, 0.6) !important;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.UrlImageHolder {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  & div:first-child {
+    margin-bottom: 10px;
+  }
+
+  & div:last-child {
+    width: -webkit-fill-available;
+  }
+
+  @include breakpoint-up(small) {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    & div:first-child {
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+  }
+}
+
+.file-preview {
+  position: relative;
+  width: fit-content;
+
+  &--pdfViewer {
+    width: 250px;
+    height: 400px;
+    cursor: pointer;
+    background-color: rgba($black, 0.5);
+    border-radius: 10px;
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($black, 0.5);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  border-radius: 10px;
+}
+
+.file-preview:hover .overlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  & p {
+    font-weight: bold;
+    color: $white;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  border-radius: 50px;
+  background: $white;
+  cursor: pointer;
+
+  & svg {
+    font-weight: bold;
+    color: $black;
+  }
+}

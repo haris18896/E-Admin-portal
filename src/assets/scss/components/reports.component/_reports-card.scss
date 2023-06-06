@@ -1,0 +1,58 @@
+.reports__card {
+    border: 1px solid rgba(0,0,0,.3);
+    border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        background-color: white;
+        margin: 10px;
+
+    &--top{
+        padding: 15px 0px 15px 30px;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+
+        border-bottom: 1px solid rgba(0,0,0,.3);
+
+        &span:first-child{}
+
+        & span:last-child{
+            font-size: 22px;
+            font-weight: bold;
+        }
+    }
+
+    &--bottom{
+        background-color: white;
+        padding: 10px;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+
+        &-left{
+            & svg {
+                margin-left: 5px;
+            }
+            & span{
+                margin: 0px 5px;
+            }
+        }
+
+        &-right {
+            & svg {
+                margin-left: 5px;
+            }
+            
+            & span{
+                margin: 0px 5px;
+            }
+        }
+}
+
+}

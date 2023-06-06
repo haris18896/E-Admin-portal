@@ -1,0 +1,751 @@
+.Client-overView {
+  &--Name_status {
+    @include flex-start-center;
+
+    & h2 {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    & span {
+      margin-left: 7px;
+    }
+  }
+
+  &--status {
+    display: flex;
+    @include flex-column;
+
+    & button {
+      width: 100%;
+
+      @include breakpoint-up(large) {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    @include breakpoint-up(xSmall) {
+      @include flex-row;
+
+      &__button {
+        width: 100%;
+      }
+    }
+
+    @include breakpoint-up(med) {
+      align-items: center;
+      justify-content: flex-end;
+      &__button {
+        width: fit-content;
+
+        & button {
+          width: 180px;
+        }
+      }
+    }
+  }
+
+  &--tags {
+    @include flex-center;
+    width: 150px;
+    cursor: pointer;
+    padding: 4px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin: 0px 5px;
+    background-color: $white;
+
+    @include breakpoint-down(med) {
+      width: 100%;
+    }
+
+    & span {
+      margin-left: 7px;
+    }
+
+    .modal-backdrop.show {
+      opacity: 0.6 !important;
+    }
+  }
+
+  &__appointments {
+    @include flex-start-center;
+
+    @include breakpoint-down(med) {
+      @include flex-column;
+      @include flex-align-start;
+      
+      & div {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      & div:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__Appt {
+    @include flex-center;
+    cursor: pointer;
+    padding: 0px 15px 0px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin: 0px 5px;
+
+    & span {
+      margin-left: 7px;
+    }
+
+    & svg {
+      margin: 2px;
+      padding: 4px;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+    }
+
+    &--backgroundBrown {
+      background-color: $ethera-dark-brown !important;
+
+      & svg {
+        background-color: $ethera-brown !important;
+      }
+    }
+
+    &--backgroundEtheraDark {
+      background-color: $ethera-gray-light !important;
+      & svg {
+        background-color: $ether-calendar-active !important;
+      }
+    }
+  }
+}
+
+.invoice-div {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  padding: 2px 9px;
+  margin: auto 0;
+
+  & svg {
+    margin-right: 5px;
+  }
+}
+
+.billing-edit {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 3px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.popoverBodySmall {
+  padding: 0 !important;
+
+  & button {
+    width: 120px;
+  }
+}
+
+.signature {
+  @include breakpoint-up(xSmall) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & div {
+    & span {
+      color: #dedede;
+    }
+  }
+
+  & button {
+    padding: 0.4rem 1.4rem;
+    margin-top: $margin-2;
+
+    & svg {
+      transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+    }
+
+    @include breakpoint-up(xSmall) {
+      margin-top: 0;
+      align-self: flex-end;
+    }
+
+    & span {
+      margin-left: 0.4rem;
+    }
+  }
+}
+
+.list_overview {
+  &--editor_row {
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    @include breakpoint-up(xLarge) {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+  }
+
+
+  &--submission {
+    @include flex-end-center;
+
+    &--date {
+      width: 200px;
+    }
+
+    &--time {
+      margin-left: 20px;
+      width: 130px;
+    }
+
+    & button {
+      width: 180px;
+      margin-left: 20px;
+    }
+
+    @include breakpoint-down(small) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      &--date, &--time, & button {
+        width: 100%;
+      }
+
+      & button,
+      &--time {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &--filters {
+    &__date {
+      margin-bottom: 1rem;
+      width: 100%;
+
+      @include breakpoint-up(xxSmall) {
+        width: fit-content;
+        margin-right: 1rem;
+
+        & input {
+          width: fit-content;
+        }
+      }
+
+      @include breakpoint-up(large) {
+        margin-bottom: 0;
+      }
+
+      & input {
+        width: 100%;
+      }
+    }
+
+    margin: 1rem;
+    @include flex-start-center;
+    @include breakpoint-up(xLarge) {
+      margin: 1rem 3rem;
+    }
+
+    &__date-range {
+      width: 250px;
+      margin-right: 20px;
+    }
+
+    &__selector {
+      width: 150px;
+    }
+
+    @include breakpoint-down(xxSmall) {
+      @include flex-column;
+      align-items: flex-start;
+      justify-content: center;
+
+      margin: 1rem;
+    }
+  }
+
+  &--appointments {
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    // background-color: goldenrod;
+
+    @include breakpoint-up(xLarge) {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+
+    &__header {
+      margin-bottom: 1rem;
+      display: flex;
+      // justify-content: center;
+      align-items: flex-start;
+      @include flex-column;
+
+      @include breakpoint-up(small) {
+        @include flex-row;
+      }
+
+      &--date {
+        background-color: $ethera-gray-light;
+        padding: 0.3rem 1rem;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        margin-right: $margin-3;
+
+        & span {
+          color: $black;
+          font-weight: 400;
+          font-size: $font-size-sm;
+          white-space: nowrap;
+        }
+      }
+
+      &--details {
+        flex: 1;
+        min-width: 300px;
+        &__tag {
+          display: flex;
+          align-items: flex-start;
+
+          & span {
+            font-size: $font-size-lg;
+            font-weight: 500;
+            padding: $tag-padding;
+            background-color: $ethera-brick;
+            color: $ethera-text-color;
+            margin-left: $margin-4;
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+          }
+
+          & p {
+            margin: 0;
+            font-size: $font-size-md;
+            font-weight: 700;
+
+            font-size: $font-size-md;
+
+            @include breakpoint-up(xxSmall) {
+              font-size: $font-size-h5;
+            }
+
+            @include breakpoint-up(xxMedLarge) {
+              font-size: $font-size-h4;
+            }
+          }
+
+          &--editComp {
+            margin-left: $margin-2;
+            @include breakpoint-up(xxSmall) {
+              margin-left: $margin-4;
+            }
+          }
+        }
+
+        &__edit {
+          display: flex;
+          align-items: center;
+
+          & div {
+            margin: 0 0.3rem 1rem 0.3rem;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            cursor: pointer;
+
+            @include breakpoint-up(xxSmall) {
+              padding: 0.3rem 0.7rem;
+            }
+          }
+        }
+      }
+
+      &--notes {
+        margin-right: $margin-2;
+        & div {
+          & select {
+            cursor: pointer;
+            padding-top: 0.271rem !important;
+            padding-bottom: 0.271rem !important;
+          }
+
+          @include breakpoint-up(medLg) {
+            min-width: 250px;
+            margin-right: $margin-4;
+          }
+        }
+
+        @include breakpoint-down(xxSmall) {
+          width: 100%;
+        }
+      }
+
+      &--time {
+        & span {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    &__description {
+      width: 100%;
+      // background-color: red;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      &--head__expand {
+        cursor: pointer;
+      }
+
+      @include breakpoint-up(xLarge) {
+        width: 77%;
+        margin-left: 8rem;
+      }
+
+      &--head {
+        &__noteHeading {
+          @include client-overview-note-heading;
+
+          @include breakpoint-down(xxSmall) {
+            width: 100%;
+          }
+
+          & svg {
+            margin-left: $margin-3;
+          }
+        }
+
+        &__row {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          margin-bottom: 1rem;
+          @include flex-column;
+
+          @include breakpoint-down(xxSmall) {
+            width: 100%;
+          }
+
+          @include breakpoint-up(med) {
+            @include flex-row;
+            // align-items: center;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+        }
+
+        &__expand {
+          margin: $margin-3;
+          padding-top: 7px;
+          padding-bottom: 7px;
+
+          & svg {
+            margin-left: $margin-2;
+            background-color: $ethera-project-head;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            padding: 3px;
+          }
+          @include breakpoint-up(med) {
+            margin: 0 $margin-2;
+          }
+        }
+
+        &__clients {
+          display: flex;
+          @include flex-column;
+          justify-content: center;
+          align-items: flex-start;
+          flex-wrap: wrap;
+
+          @include breakpoint-up(xSmall) {
+            @include flex-row;
+            justify-content: flex-start;
+            align-items: center;
+          }
+
+          & span {
+            margin-left: $margin-1;
+            margin-right: $margin-1;
+            margin-bottom: $margin-1;
+            background-color: $ethera-project-head;
+            border: 1px solid $ethera-project-head;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            white-space: nowrap;
+
+            @include breakpoint-down(medLg) {
+              margin-bottom: $margin-2;
+            }
+          }
+          @include breakpoint-up(med) {
+            margin-left: $margin-5;
+          }
+        }
+      }
+
+      &--soap {
+        @include client-overview-note-main;
+
+        &__note {
+          margin: $margin-2 0;
+          border: 1px solid rgba(0, 0, 0, 0.4);
+          padding: $margin-4;
+
+          &--fragment:not(:last-child) {
+            margin-bottom: $margin-5;
+          }
+
+          &--fragment {
+            & section {
+              margin-left: 24px;
+            }
+          }
+
+          &--heading {
+            display: flex;
+            @include flex-row;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: $margin-1;
+
+            & div {
+              margin-left: 0 !important;
+            }
+          }
+        }
+      }
+
+      &--progress {
+        @include client-overview-note-main;
+      }
+
+      &--diagnosis {
+        @include client-overview-note-main;
+
+        &__note {
+          & div {
+            margin-bottom: $margin-1;
+          }
+        }
+      }
+
+      &--other {
+        @include client-overview-note-main;
+      }
+    }
+  }
+}
+
+.signature_modal {
+  padding: 0.7rem;
+
+  @include breakpoint-up(xSmall) {
+    padding: 2rem;
+  }
+
+  &--heading {
+    @include flex-between-center;
+    margin-bottom: $margin-2;
+    width: 100%;
+
+    & span {
+      font-size: $font-size-h3;
+      font-weight: 700;
+
+      @include breakpoint-down(xxSmall) {
+        font-size: $font-size-h4;
+      }
+    }
+
+    & svg {
+      font-weight: 600;
+      margin-left: $margin-3;
+    }
+  }
+
+  &--body {
+    margin-bottom: $margin-3;
+    @include breakpoint-up(xSmall) {
+      margin-bottom: $margin-0;
+      @include flex-row;
+      algin-items: flex-start !important;
+    }
+
+    @include flex-center-start;
+    @include flex-column;
+
+    & div {
+      width: 100%;
+
+      & div {
+        @include breakpoint-down(xxSmall) {
+          padding: 0;
+        }
+      }
+    }
+
+    &__fields {
+    }
+
+    &__signature {
+      @include flex-center;
+      @include flex-column;
+      height: 150px;
+      width: 100%;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      margin-top: $margin-3;
+      margin-bottom: $margin-3;
+      cursor: pointer;
+
+      @include breakpoint-up(xSmall) {
+        align-items: flex-start;
+        margin-left: $margin-4;
+      }
+
+      @include breakpoint-up(small) {
+        margin-left: $margin-11;
+      }
+
+      // & img {
+      //   @include breakpoint-up(xSmall) {
+      //     width: inherit;
+      //     height: inherit;
+      //     object-fit: cover;
+      //   }
+      // }
+    }
+
+    &__required {
+      margin: $margin-3 $margin-2 !important;
+      width: fit-content !important;
+      & a {
+        color: $ethera-link;
+      }
+
+      & span {
+        width: 100%;
+        text-align: center;
+        font-size: $font-size-sm;
+      }
+    }
+  }
+
+  &--footer {
+    // @include flex-end-center;
+    @include flex-center;
+
+    @include breakpoint-up(xSmall) {
+      justify-content: flex-end;
+    }
+
+    & button {
+      &:first-child {
+        padding: $btn-med-padding !important;
+        margin-right: $margin-2;
+      }
+
+      &:last-child {
+        padding: $text-icon-padding !important;
+        & span {
+          margin-left: $margin-2;
+        }
+        & svg {
+          transform: rotate(-90deg);
+          -webkit-transform: rotate(-90deg);
+          -moz-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+          -o-transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+
+  &--preview {
+    @include flex-center;
+    @include flex-column;
+  }
+
+  &--block {
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+
+.modalSignature {
+  min-width: 70% !important;
+  max-width: 95% !important;
+
+  @include breakpoint-up(small) {
+    min-width: 600px !important;
+    max-width: 700px !important;
+  }
+
+  @include breakpoint-up(medLg) {
+    max-width: 800px !important;
+  }
+}

@@ -1,0 +1,191 @@
+.message .modal-content {
+  background-color: transparent !important;
+}
+
+.message {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  margin-top: 4rem;
+
+  @include breakpoint-up(xSmall) {
+    max-width: 90% !important;
+  }
+
+  @include breakpoint-up(med) {
+    margin-top: 2rem;
+  }
+
+  @include breakpoint-down(large) {
+    margin-top: 0;
+    max-width: 80% !important;
+  }
+
+  @include breakpoint-up(xLarge) {
+    max-height: 80% !important;
+    max-width: 75% !important;
+  }
+}
+
+.message_modal {
+  &--header {
+    @include flex-start-center;
+
+    & svg {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    & div {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+      -o-border-radius: 30px;
+      // color: $white;
+      padding: 0.4rem 1.5rem;
+    }
+  }
+
+  &--messages {
+    margin-top: 1rem;
+    background-color: $ethera-income-head;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 1rem;
+
+    &__submission {
+      @include flex-end-center;
+      margin-top: 1rem;
+
+      & button {
+        margin-left: 10px;
+        padding: 0.5rem 3rem !important;
+      }
+    }
+
+    &--alert {
+      display: flex;
+      align-items: flex-start;
+
+      & svg {
+        color: $ethera-text-color;
+      }
+
+      & div {
+        margin-left: 10px;
+        & span {
+          color: $ethera-text-color;
+        }
+      }
+    }
+
+    &--chats {
+      min-height: 150px;
+      max-height: 300px;
+      overflow-y: scroll;
+
+      &__date {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+        width: fit-content;
+        background-color: white;
+        padding: $btn-padding;
+        border-radius: 25px;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+
+        & div:not(:last-of-type) {
+          margin-bottom: 1rem;
+        }
+
+        &--left {
+          max-width: 600px;
+          align-self: flex-start;
+
+          & section {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            & div:last-child {
+              margin-left: 15px;
+
+              & section:first-child {
+                border-top-right-radius: 10px;
+              }
+
+              & section:last-child {
+                border-bottom-right-radius: 10px;
+              }
+
+              & section {
+                background-color: $ethera-yellow;
+                padding: 1rem;
+                margin-bottom: 5px;
+                display: flex !important;
+                flex-direction: column !important;
+                width: fit-content !important;
+
+                & span {
+                  align-self: flex-end;
+                  margin-top: 5px;
+                  margin-left: 10rem;
+                }
+              }
+            }
+          }
+        }
+
+        &--right {
+          max-width: 600px;
+          align-self: flex-end;
+
+          & section {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+
+            & div:last-child {
+              margin-right: 15px;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+
+              & section:first-child {
+                border-top-left-radius: 10px;
+              }
+
+              & section:last-child {
+                border-bottom-left-radius: 10px;
+              }
+
+              & section {
+                background-color: $ethera-gray-light;
+                padding: 1rem;
+                margin-bottom: 5px;
+                display: flex !important;
+                flex-direction: column !important;
+                width: fit-content !important;
+
+                & span {
+                  align-self: flex-end;
+                  margin-top: 5px;
+                  margin-left: 10rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

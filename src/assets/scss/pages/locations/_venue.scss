@@ -1,0 +1,470 @@
+.locations {
+  &--card {
+    &__body {
+      border-right: 1px solid rgba($black, 0.2);
+      border-left: 1px solid rgba($black, 0.2);
+      border-bottom: 1px solid rgba($black, 0.2);
+      border-bottom-right-radius: 0.428rem !important;
+      border-bottom-left-radius: 0.428rem !important;
+
+      & h4 {
+        margin-bottom: 5px !important;
+      }
+
+      & button {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &--addVenue {
+    padding: 1rem;
+    width: fit-content;
+    text-align: center;
+    cursor: pointer;
+    color: $gray-800;
+    background-color: $ethera-btn-gray;
+    border-radius: 0.428rem !important;
+    border: 1px dashed rgba($black, 0.8);
+
+    & svg {
+      font-weight: 600;
+    }
+
+    & p {
+      font-weight: 600;
+    }
+  }
+}
+
+.create-location {
+  &--location_detail {
+    @include breakpoint-up(xLarge) {
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+    }
+
+    @include breakpoint-up(xxxSLarge) {
+      width: 80%;
+    }
+
+    &__operatingHours {
+      @include flex-start-center;
+
+      &--day {
+        min-width: 8rem;
+      }
+
+      &--time {
+        width: -webkit-fill-available;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        @include flex-column;
+
+        @include breakpoint-up(xxxSmall) {
+          @include flex-row;
+          align-items: center;
+          justify-content: space-around;
+          width: fit-content;
+          margin-left: auto;
+
+          & input {
+            max-width: 130px;
+          }
+        }
+      }
+
+      &--open {
+        @include breakpoint-up(xxxSmall) {
+          margin-right: 1rem;
+        }
+      }
+
+      @include breakpoint-up(xxxSmall) {
+        &--time {
+          justify-content: flex-end;
+        }
+
+        &--open {
+          min-width: 9rem;
+          & p {
+            margin-left: 1rem;
+          }
+        }
+
+        &--close {
+          min-width: 9rem;
+          & p {
+            margin-left: 1rem;
+          }
+        }
+      }
+
+      @include breakpoint-up(med) {
+        width: 70%;
+      }
+
+      @include breakpoint-up(large) {
+        width: 50%;
+      }
+    }
+
+    &__actions {
+      & div {
+        & button {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+      }
+
+      @include breakpoint-up(xxSmall) {
+        &--save {
+          @include flex-between-center;
+          & button {
+            margin-bottom: 0;
+            &:first-child {
+              margin-right: 1rem;
+            }
+          }
+        }
+      }
+
+      @include breakpoint-up(xSmall) {
+        @include flex-between-center;
+        & div {
+          & button {
+            width: fit-content;
+            margin-bottom: 0;
+          }
+        }
+
+        &--save {
+          justify-content: flex-end;
+        }
+      }
+
+      @include breakpoint-up(large11) {
+        width: 60%;
+      }
+    }
+  }
+
+  &--location_tier {
+    &__buttons {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+
+      & button {
+        width: 100%;
+
+        &:first-child {
+          margin-right: 1rem;
+        }
+      }
+
+      @include breakpoint-up(xSmall) {
+        justify-content: flex-end;
+        align-items: center;
+        width: fit-content;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &--room_detail {
+    &__top {
+      &--left {
+      }
+
+      &--right {
+        margin-top: 2rem;
+        &--data {
+          background-color: $ethera-system-settings-bg;
+          border-radius: 5px;
+
+          &__button {
+            padding: 2rem;
+            width: -webkit-fill-available;
+
+            & button {
+              width: 100%;
+            }
+          }
+
+          & p {
+            padding: 2rem;
+            text-align: center;
+          }
+        }
+
+        &--list {
+          padding: 1rem 1.4rem;
+          @include flex-center-start;
+          @include flex-column;
+          flex-wrap: wrap;
+
+          &__obj {
+            @include flex-start-center;
+            @include flex-row;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: $white;
+            // padding: 7px 10px 7px 0px;
+            border: 1px solid rgba($black, 0.5);
+
+            &:hover {
+              cursor: pointer;
+              box-shadow: 0 3px 9px -5px #82868b !important;
+            }
+
+            &--tag {
+              width: 10px;
+              height: 35px;
+              border-top-left-radius: 5px;
+              border-bottom-left-radius: 5px;
+              background: $ethera-unselect-tag;
+              margin-right: 1rem;
+
+              &__selected {
+                background-color: $ethera-select-tag !important;
+              }
+            }
+          }
+
+          @include breakpoint-up(xxSmall) {
+            @include flex-row;
+            justify-content: space-between;
+
+            &__obj {
+              max-width: 48%;
+            }
+          }
+        }
+      }
+
+      @include breakpoint-up(medLg) {
+        @include flex-between-start;
+        @include flex-row;
+
+        &--left {
+          width: 50%;
+        }
+
+        &--right {
+          width: 49%;
+        }
+      }
+    }
+
+    &__operatingHours {
+      @include flex-start-center;
+      
+      &--day {
+        min-width: 8rem;
+      }
+
+      &--time {
+        width: -webkit-fill-available;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        @include flex-column;
+        @include breakpoint-up(xxxSmall) {
+          @include flex-row;
+          align-items: center;
+          justify-content: space-around;
+          width: fit-content;
+          margin-left: auto;
+
+          & input {
+            max-width: 130px;
+          }
+        }
+      }
+
+      &--open {
+        @include breakpoint-up(xxxSmall) {
+          margin-right: 1rem;
+
+          &--open {
+            min-width: 7rem;
+          }
+
+          &--close {
+            min-width: 7rem;
+          }
+        }
+      }
+      @include breakpoint-down(xxSmall) {
+        &--time {
+          flex-direction: column;
+          width: -webkit-fill-available;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+        }
+        &--open {
+          margin-right: 0;
+        }
+      }
+      @include breakpoint-up(xxxSmall) {
+        &--time {
+          justify-content: flex-end;
+        }
+
+        &--open {
+          min-width: 9rem;
+          & p {
+            margin-left: 1rem;
+          }
+        }
+
+        &--close {
+          min-width: 9rem;
+          & p {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+
+    &__roomSelected {
+      width: 100%;
+
+      &--roomAuthorization {
+        &__radio {
+         
+          @include breakpoint-up(xxxSmall) {
+            @include flex-start-center;
+            @include flex-row;
+
+            & div {
+              min-width: 150px;
+            }
+          }
+          @include breakpoint-down(xxSmall) {
+            display: block
+            }
+        }
+
+        &__search {
+          & ul {
+            background: #f9f9f9;
+            padding: 2rem 1rem 1rem 1rem;
+            margin-top: -20px;
+            border-radius: 14px;
+            max-height: 140px;
+            overflow-y: scroll;
+
+            & li {
+              margin-left: 5px;
+              list-style: none;
+              position: relative;
+              cursor: pointer;
+
+              &:not(:last-child) {
+                margin-bottom: 10px;
+              }
+
+              & span {
+                padding: 0 4px;
+                margin-right: 10px;
+                background-color: $ethera-green;
+                color: $white;
+                border-radius: 20px;
+                font-size: 10px;
+              }
+            }
+          }
+        }
+
+        &__authorizationList {
+          margin-top: 2rem;
+          .authorizations {
+            &:not(:first-child) {
+              margin-top: 1rem;
+            }
+            border: 1px solid rgba(gray, 0.2);
+            border-top-width: 0;
+
+            & ul {
+              margin-top: 1rem;
+
+              & li {
+                list-style-type: none;
+                margin-bottom: 5px;
+              }
+            }
+          }
+
+          @include breakpoint-up(xxSmall) {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            @include flex-row;
+
+            & .authorizations {
+              width: 100%;
+              margin-top: 0 !important;
+              &:first-child {
+                margin-right: 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      &__actions {
+        & div {
+          & button {
+            width: 100%;
+            margin-bottom: 1rem;
+          }
+        }
+
+        @include breakpoint-up(xxSmall) {
+          &--save {
+            @include flex-between-center;
+            & button {
+              margin-bottom: 0;
+              &:first-child {
+                margin-right: 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      @include breakpoint-up(medLg) {
+        width: 50%;
+
+        &__actions {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          & div {
+            & button {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#roomModal {
+  @include breakpoint-up(med) {
+    max-width: 700px !important;
+  }
+
+  @include breakpoint-up(large11) {
+    max-width: 900px !important;
+  }
+}

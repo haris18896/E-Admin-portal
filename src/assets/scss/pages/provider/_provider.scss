@@ -1,0 +1,167 @@
+.provider {
+  &--header {
+    @include flex-center-start;
+    @include flex-column;
+
+    &__editScreen {
+      &--title {
+        &__providerName {
+          width: 100%;
+          text-align: center;
+          margin-top: 1rem;
+        }
+
+        @include breakpoint-up(xxxSmall) {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          &__name {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+          }
+
+          &__providerName {
+            margin-top: 0;
+            width: fit-content;
+            text-align: left;
+          }
+        }
+      }
+
+      &--button {
+        width: -webkit-fill-available;
+        margin-top: 1rem;
+        & button {
+          width: 100%;
+        }
+      }
+
+      @include breakpoint-up(xSmall) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--title {
+          justify-content: flex-start;
+
+          &__providerName {
+            margin-left: 1rem;
+          }
+        }
+
+        &--button {
+          width: fit-content;
+          margin-top: 0;
+        }
+      }
+    }
+
+    &__dropdown {
+      width: 100%;
+
+      & button {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      &--selectors {
+        position: relative !important
+      }
+
+      @include breakpoint-up(xxSmall) {
+        @include flex-start-center;
+        &--selectors {
+          width: 100%;
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+
+          &:last-child {
+            margin-left: 5px;
+          }
+        }
+      }
+      @include breakpoint-down(xxSmall) {
+        &--selectors {
+          &:not(:last-child) {
+            margin-right: 05px;
+            margin-left: -5px;
+          }
+        }
+      }
+
+      @include breakpoint-up(medLg) {
+        width: fit-content;
+      }
+    }
+
+    &__search {
+      width: 100%;
+
+      & button {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      @include breakpoint-up(xxSmall) {
+        @include flex-start-center;
+
+        & div {
+          width: 100%;
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      @include breakpoint-up(medLg) {
+        width: fit-content;
+      }
+
+      @include breakpoint-up(large11) {
+        & div:first-child {
+          min-width: 150px !important;
+        }
+      }
+
+      @include breakpoint-up(xLarge) {
+        & div:first-child {
+          min-width: 200px !important;
+        }
+      }
+    }
+
+    // @include breakpoint-up(medLg) {
+    @include breakpoint-up(medLg) {
+      @include flex-row;
+      align-items: center;
+      justify-content: space-between;
+
+      .button-green {
+        min-width: 150px !important;
+        margin-bottom: 0 !important;
+      }
+
+      & div,
+      & button {
+        margin-bottom: 0 !important;
+      }
+
+      & button {
+        & span {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+.modal-credit-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  & button:first-child {
+    margin-right: 1rem;
+  }
+}

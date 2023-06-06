@@ -1,0 +1,93 @@
+.table {
+  &--name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    & span {
+      margin-left: 15px;
+    }
+  }
+
+  &--selectedRows {
+    @include flex-between-center;
+    width: 100%;
+    overflow-x: scroll;
+
+    &__actions {
+      @include flex-start-center;
+
+      & button {
+        margin-right: 10px;
+      }
+
+      &--delete {
+        background-color: $bg-ethera;
+        padding: 3px 17px;
+        border-radius: 25px;
+        border: 1px solid rgba($ethera-text-color, 0.7) !important;
+      }
+    }
+
+    &__count {
+      font-size: 14px;
+      font-weight: 500;
+      margin-right: 20px;
+      white-space: nowrap;
+      margin-left: 20px;
+      color: rgba(0, 0, 0, 0.7) !important;
+    }
+  }
+}
+.react_dataTable {
+  overflow-y: hidden !important;
+}
+.main-box-pagination {
+  height: 2.5rem !important;
+  position: relative !important;
+}
+
+@media only screen and (min-device-width: 200px) and (max-device-width: 500px) and (-webkit-min-device-pixel-ratio: 1) {
+  .main-box-pagination {
+    height: 6.9rem !important;
+    position: relative !important;
+  }
+}
+
+@media only screen and (min-device-width: 501px) and (max-device-width: 575px) and (-webkit-min-device-pixel-ratio: 1) {
+  .main-box-pagination {
+    height: 6.9rem !important;
+    position: relative !important;
+  }
+}
+.rdt_TableHead {
+  background-color: #f9f6ed !important;
+}
+ 
+
+.padding-bottom-2rem{
+  padding-bottom: 1.8rem !important;
+}
+.rdt_TableCol_Sortable div {
+  white-space: normal !important;
+}
+
+.rdt_TableCol,
+.rdt_TableCell {
+  border-right: 1px solid rgba(216, 214, 222, 0.2);
+  padding: 0.5rem 0.7rem !important;
+}
+
+.rdt_TableRow:hover {
+  background-color: $etheraHeader !important;
+  cursor: pointer !important;
+  color: inherit !important;
+}
+
+.rdt_TableRow {
+  border-bottom: 1px solid rgba(216, 214, 222, 0.2) !important;
+}
+
+.rdt_TableCol_Sortable {
+  justify-content: space-between !important;
+}

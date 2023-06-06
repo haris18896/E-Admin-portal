@@ -1,0 +1,88 @@
+.notifications {
+  &--header {
+    @include breakpoint-up(xxSmall) {
+      display: flex;
+      @include flex-column;
+    }
+
+    @include breakpoint-up(med) {
+      @include flex-row;
+    }
+
+    @include breakpoint-up(large) {
+    }
+
+    &__search {
+      @include breakpoint-up(med) {
+        flex: 1;
+        margin-right: 30px;
+      }
+
+      @include breakpoint-up(xxMedLarge) {
+        & div {
+          max-width: 550px;
+        }
+      }
+    }
+
+    &__buttons {
+      @include breakpoint-up(xxSmall) {
+        display: flex;
+      }
+
+      & button {
+        padding: 0.3rem 1.5rem;
+        width: 100%;
+        margin-top: 1rem;
+
+        & span {
+          margin-left: 10px;
+        }
+
+        @include breakpoint-up(xxSmall) {
+          &:not(:first-child) {
+            margin-left: 10px;
+          }
+        }
+
+        @include breakpoint-up(med) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  
+
+  &--table {
+    display: flex;
+
+    &__message {
+      flex: 1;
+    }
+
+    &__icon {
+      padding: 5px 7px;
+      background-color: $white;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    &__tableHover {
+      & svg {
+        display: none;
+      }
+
+      & td {
+        padding: 1rem 2rem;
+      }
+      border-top-width: 0 !important;
+
+      &:hover {
+        background: #F5F5F5 !important;
+        & svg {
+          display: block;
+        }
+      }
+    }
+  }
+}

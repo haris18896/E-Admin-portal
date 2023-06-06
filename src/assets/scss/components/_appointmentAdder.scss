@@ -1,0 +1,98 @@
+.Appointment {
+    &--roomCost{
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e2e0db;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        &__h4 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        &__p{
+            font-weight: 700;
+            font-size: 18px;
+            padding: 12px 50px 12px 30px;
+            background-color: #f0f0f0;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+    }
+}
+
+.appointment__Details {
+    
+    &--radio {
+    margin-bottom: 15px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        & p {
+            margin-bottom: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        &--cursor{
+            cursor: pointer;
+        }
+        &--buttons {
+            display: flex;
+            gap: 10px;
+            & div {
+                padding: 12px 30px;
+                border-radius: 20px;
+}
+
+            &__buttonActive{
+                background-color: #fff9ef;
+                border: 1px solid #c1ac97;
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .appointment__Details {
+        &--radio {
+            display: flex;
+        flex-direction: column-reverse !important;
+            & p {
+                font-size: 12px;
+            }
+    
+            &--buttons {
+                gap: 5px;
+                & div {
+                    padding: 12px 30px;
+                    border-radius: 20px;
+                }
+
+                &__buttonActive{
+                    background-color: #fff9ef;
+                    border: 1px solid #c1ac97;
+                }
+            }
+        }
+    }
+}
+
+.appointment__fields {
+    display: flex;
+    flex-direction: column;
+
+    & button {
+        width: 50%;
+        margin-left: auto;
+        background-color: #a8b482 !important;
+        white-space: nowrap;
+        border: none;
+        color: rgba(0,0,0,.7) !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+    }
+}

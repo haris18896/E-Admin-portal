@@ -1,0 +1,99 @@
+.button-green {
+  background-color: $button-green !important;
+  padding: $button-green-padding !important;
+  border: none !important;
+  position: relative;
+
+  &:active {
+    background-color: $button-green !important;
+  }
+  &:focus {
+    background-color: $button-green !important;
+  }
+  &:hover {
+    box-shadow: 0 3px 9px -5px #82868b !important;
+  }
+  &::before {
+    content: '+';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    background-color: #fff;
+    color: $button-green;
+    width: 1.5rem;
+    height: 1.5rem;
+    // z-index: 5;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
+}
+
+.button-icon-delete {
+  background-color: $ethera-brick !important;
+  padding: $button-green-padding !important;
+  border: none !important;
+  position: relative;
+  color: $ethera-brick-dark !important;
+
+  &:active {
+    background-color: $ethera-brick !important;
+  }
+  &:focus {
+    background-color: $ethera-brick !important;
+  }
+  &:hover {
+    box-shadow: 0 3px 9px -5px #82868b !important;
+  }
+  &::before {
+    content: '-';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    background-color: $ethera-brick-dark;
+    color: $white;
+    width: 1.5rem;
+    height: 1.5rem;
+    // z-index: 5;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
+}
+
+
+.btn-green-large {
+  background-color: $button-green !important;
+  color: $white;
+  border: none !important;
+  text-align: center !important;
+  width: 100%;
+
+  &:active {
+    background-color: $button-green !important;
+  }
+  &:focus {
+    background-color: $button-green !important;
+  }
+  &:hover {
+    box-shadow: 0 3px 9px -5px #82868b !important;
+  }
+  & span {
+    margin-left: 10px;
+    white-space: nowrap;
+  }
+
+  @include breakpoint-down(med) {
+    margin-bottom: 1rem;
+  }
+}

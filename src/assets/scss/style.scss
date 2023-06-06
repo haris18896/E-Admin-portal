@@ -1,0 +1,75 @@
+/*================================================================================
+	Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
+	Version: 2.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+// ** variables
+@import './variables/variables';
+@import './variables/variables-components';
+
+// ** utils
+@import './utils/mixins';
+@import './utils/helpers';
+@import './utils/functions';
+
+// ** Layout
+@import './layout/footer';
+@import './layout/header';
+@import './layout/navigation';
+
+// ** Base
+@import './base/reset';
+@import './base/typography';
+
+// ** Components
+@import './components/modal/modal';
+@import './components/tables/table';
+@import './components/editor/editor';
+@import './components/header/header';
+@import './components/switch/switch';
+@import './components/button/buttons';
+@import './components/appointmentAdder';
+@import './components/button/buttonGreen';
+@import './components/head-tabs/headTabs';
+@import './components/button/greenSelectPlus';
+@import './components/react-data-table/index';
+@import './components/fileUploader/fileUploader';
+@import './components/settings.components/calender';
+@import './components/reports.component/reports-card';
+@import './components/appointment.components/bookingsStats';
+@import './components/customCheckboxAndRadio/checkboxAndRadio';
+@import './components/appointment.components/appointmentStats';
+
+
+
+// ** Pages
+@import './pages/login/login';
+@import './pages/settings/team';
+@import './pages/billing/billing';
+@import './pages/locations/venue';
+@import './pages/settings/invoice';
+@import './pages/calendar/calendar';
+@import './pages/provider/provider';
+@import './pages/settings/telehealth';
+@import './pages/ethera-access/access';
+@import './pages/clients/header/header';
+@import './pages/system-settings/index';
+@import './pages/clients/billing/client';
+@import './pages/settings/billing/billing';
+@import './pages/calendar/appointmentForm';
+@import './pages/clients/overview/overView';
+@import './pages/notifications/notifications';
+@import './pages/clients/messageModal/messageModal';
+@import './pages/settings/document/notes-and-forms';
+@import './pages/settings/notifications/notifications';
+@import './pages/clients/edit-and-client/editAndAddClient';
+
+// ** override
+@import 'override';

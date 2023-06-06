@@ -1,0 +1,30 @@
+.toolbarClassName {
+    border: none !important;
+    &--text {
+        background-color: transparent !important;
+        // color: $ethera-gray-text !important;
+        border: none !important;
+    }
+}
+
+.wrapperClassName {
+    background-color: $white;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column-reverse;
+    border: 1px solid $ethera-gray-text !important;
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    -ms-border-radius: 4px !important;
+    -o-border-radius: 4px !important;
+}
+
+.editorClassName {
+    background-color: $white;
+    height: 120px !important;
+    overflow-y: scroll !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

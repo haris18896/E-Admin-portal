@@ -1,0 +1,375 @@
+.EditClient {
+  background-color: $ethera-gray-light;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+
+  & span {
+    font-size: 17px;
+    font-weight: bold;
+    color: $bg-dark;
+  }
+}
+
+.client-tabs {
+  background-color: $bg-ethera;
+  padding: $header-side-paddings;
+
+  & span {
+    background: transparent !important;
+    padding: 0px 15px 10px 15px;
+    // font-size: 14px;
+    font-size: 17px;
+    cursor: pointer;
+
+    &__unselected {
+      color: #b4b4b4 !important;
+    }
+
+    @include breakpoint-down(xxxSmall) {
+      font-size: 13px;
+    }
+
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+
+  &__selected {
+    font-weight: bold;
+    border-bottom: 3px solid $ethera-text-color !important;
+  }
+}
+
+.add_client_header {
+  @include flex-start-center;
+  @include flex-column;
+
+  & button {
+    width: 100%;
+
+    & span {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+  }
+
+  &--status {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    & span {
+      font-size: 15px;
+      white-space: nowrap;
+
+      &:last-child {
+        width: 100%;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  @include breakpoint-up(xSmall) {
+    @include flex-row;
+    align-items: center;
+    justify-content: flex-start;
+
+    &--status {
+      margin-bottom: 0;
+      width: fit-content;
+
+      @include breakpoint-up(xSmall) {
+        font-size: 13px;
+      }
+
+      @include breakpoint-up(xLarge) {
+        font-size: 15px;
+      }
+    }
+
+    .msg {
+      margin-left: 10px;
+    }
+
+    & button {
+      width: fit-content;
+      margin-left: auto;
+    }
+  }
+
+  @include breakpoint-up(med) {
+    .msg {
+      margin-left: 20px;
+    }
+  }
+
+  @include breakpoint-up(xLarge) {
+    width: 60%;
+  }
+
+  @include breakpoint-up(xxxLarge) {
+    &--status {
+      & span {
+        font-size: 17px;
+      }
+    }
+
+    & button {
+      & span {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+.client_profile {
+  padding: 0 2rem;
+  
+
+  @include breakpoint-up(xLarge) {
+    max-width: 60% !important;
+  }
+
+  &--checkbox {
+    @include flex-row-reverse-end-center;
+    cursor: pointer;
+    // margin-top: 1rem;
+
+    & input {
+      cursor: pointer;
+    }
+
+    & label {
+      cursor: pointer;
+      @include breakpoint-up(xxSmall) {
+        white-space: nowrap;
+      }
+    }
+
+    & div {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &--radiosAndChecks {
+    @include flex-start-center;
+
+    & strong {
+      white-space: nowrap;
+      font-size: 14px;
+    }
+
+    @include breakpoint-down(xSmall) {
+      @include flex-column;
+      align-items: flex-start !important;
+    }
+
+    & input {
+      margin-left: 20px;
+    }
+  }
+
+  &--tags {
+    display: inline-block;
+    background-color: $ethera-gray-dark;
+    margin: 0.5rem 0;
+    padding: 0.7rem 2rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    & span {
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: $gray-800;
+    }
+  }
+
+  &--addressTag {
+    @include flex-start-center;
+
+    & p {
+      margin-bottom: 0;
+      font-size: 12px;
+      margin-left: 20px;
+    }
+
+    @include breakpoint-down(large) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      & p {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &--datePicker {
+    @include flex-start-center;
+    @include flex-row;
+
+    @include breakpoint-down(med) {
+    }
+  }
+
+  &--age {
+    display: inline-block;
+    background-color: $ethera-gray-dark;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin-top: 1rem;
+    margin-left: 20px;
+    x & span {
+      white-space: nowrap;
+    }
+  }
+
+  &--doubleCol {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__50 {
+      min-width: 50%;
+
+      @include breakpoint-down(xSmall) {
+        min-width: 100%;
+      }
+    }
+
+    &__20 {
+      min-width: 20%;
+
+      @include breakpoint-down(xSmall) {
+        min-width: 100%;
+      }
+    }
+  }
+
+  &--billingType {
+    & p {
+      margin: 0;
+    }
+    & span {
+      font-size: 10px;
+    }
+  }
+
+  &--insuranceInformation {
+    display: flex;
+
+    @include breakpoint-down(med) {
+      @include flex-column;
+    }
+  }
+
+  &--clientDefaultService {
+    background-color: $ethera-income-head;
+    position: relative;
+    margin-top: 4rem;
+    width: 95%;
+    padding: 1.5rem;
+    margin-left: 1rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    border-top-left-radius: 0 !important;
+
+    &__head {
+      display: inline-block;
+      padding: 0.5rem 2rem;
+      background-color: $ethera-gray-dark;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      position: absolute;
+      left: 0;
+      top: -33px;
+    }
+  }
+
+  &--defaultServiceForm {
+    @include flex-center;
+    @include flex-column;
+
+    &:last-child {
+      margin-bottom: 1rem;
+    }
+
+    @include breakpoint-up(xxxSmall) {
+      @include flex-row;
+      justify-content: space-between;
+    }
+  }
+
+  &--submission {
+    @include flex-start-center;
+
+    @include breakpoint-up(med) {
+      @include flex-center;
+    }
+
+    & button {
+      margin: 0px 10px;
+    }
+  }
+
+  &--licenseList {
+    & .trashLeft {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.ethera-card {
+  border: 1px solid #999;
+  border-radius: 15px ;
+  .heading{
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+   p{
+    color: $ethera-edit-card-color ;
+   }
+    h3 {
+      font-weight: bold;
+      margin-bottom: 0;
+      color: $ethera-edit-card-color  !important;
+    }
+  }
+  .heading-credit{
+    background-color: $ethera-YTD-head;
+  }
+  .heading-promo{
+    background-color: $ethera-income-head;
+  }
+  .ethera-card-edit-btn{
+    text-align: center;
+    background-color: $white!important;
+    & Button{
+      white-space: nowrap !important;
+      font-size: 11px ;
+      padding: 0.5rem 0.7rem;
+      background-color: $white !important;
+      color: $black;
+      font-weight: 400;
+    }
+    .ethera-card-edit-icon{
+      margin-right: 04px;
+    }
+  }
+}

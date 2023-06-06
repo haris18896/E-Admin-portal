@@ -1,0 +1,88 @@
+.ethera-access {
+  &--actions {
+    & span:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    & span {
+      border: 1px solid gray !important;
+      padding: 6px 20px !important;
+      white-space: nowrap !important;
+    }
+    &__testLock {
+      background-color: #edce5b !important;
+      color: gray !important;
+    }
+
+    &__edit {
+      background-color: #d0d8e5 !important;
+      color: gray !important;
+    }
+
+    &__delete {
+      background-color: #dc8887 !important;
+      color: $gray-700 !important;
+    }
+  }
+
+  &--header {
+    @include flex-center-start;
+    @include flex-column;
+
+    &__locations {
+      @include flex-between-center;
+      @include flex-row;
+      width: 100%;
+      margin-top: 1rem;
+      & p {
+        margin-right: 1rem;
+      }
+
+      &--dropDown {
+        width: 100%;
+        &--select-field{
+          position: relative !important;
+        }
+
+        & div {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+
+    @include breakpoint-up(xxxSmall) {
+      @include flex-row;
+      align-items: center;
+      justify-content: space-between;
+
+      &__heading {
+        & span {
+          white-space: nowrap;
+        }
+      }
+
+      &__locations {
+        margin-top: 0;
+        align-items: center;
+        justify-content: flex-end;
+
+        &--dropDown {
+          width: fit-content;
+        }
+      }
+    }
+  }
+
+  &--addNewLock {
+    align-items: center !important;
+    @include breakpoint-up(med) {
+      width: 75% !important;
+    }
+
+    &__save {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+}

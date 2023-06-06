@@ -1,0 +1,54 @@
+.clients-header {
+  @include flex-center-start;
+  @include flex-column;
+
+  @include breakpoint-up(small) {
+    @include flex-row;
+    justify-content: space-between;
+  }
+
+  &--inputs-fields {
+    width: -webkit-fill-available;
+
+    @include breakpoint-up(small) {
+      width: fit-content;
+    }
+
+    @include breakpoint-up (med) {
+        // display: flex;
+        // align-items: center;
+        // justify-content: flex-start;
+        flex: 1;
+    }
+  }
+
+  &--search_small {
+    @include breakpoint-up(med) {
+        display: none;
+    }
+  }
+
+  &--search_large {
+    @include breakpoint-down(med) {
+        display: none;
+    }
+  }
+
+  &--dropdown {
+    @include breakpoint-up(xSmall) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  &--button {
+    @include breakpoint-down(small) {
+      width: -webkit-fill-available;
+    }
+
+    & button {
+      width: 100%;
+    }
+  }
+}

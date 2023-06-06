@@ -1,0 +1,74 @@
+.bg-light-admin {
+  background: rgba(#c8d1ed, 0.7) !important;
+  color: $black !important;
+  border-color: #697aa6 !important;
+  border-left-width: 5px !important;
+  border-left-style: solid !important;
+
+  & a {
+    & div {
+      border-color: #697aa6 !important;
+    }
+  }
+
+  // Calendar background, color and border color
+  &.fc-h-event,
+  &.fc-v-event {
+    border-color: #697aa6 !important;
+    // border-left-width: 5px !important;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+  }
+
+  .fc-daygrid-event-dot {
+    //   border: calc(var(--fc-daygrid-event-dot-width, 8px) / 2) solid var(--fc-event-border-color, $color_value) !important;
+  }
+
+  .fc-list-event-dot {
+    border-color: #697aa6 !important;
+  }
+
+  &.fc-list-event {
+    &:hover td {
+      background: rgba(#c8d1ed, 0.1) !important;
+    }
+
+    .fc-list-event-title {
+      color: #c8d1ed;
+    }
+  }
+}
+
+.bg-light-gray {
+  // background: rgba(#C8D1ED, 0.7) !important;
+  background: rgba(#f2f2f2, 0.7) !important;
+  color: $black !important;
+
+  // Calendar background, color and border color
+  &.fc-h-event,
+  &.fc-v-event {
+    border-color: #f2f2f2 !important;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+  }
+
+  .fc-daygrid-event-dot {
+    //   border: calc(var(--fc-daygrid-event-dot-width, 8px) / 2) solid var(--fc-event-border-color, $color_value) !important;
+  }
+
+  .fc-list-event-dot {
+    border-color: #f2f2f2 !important;
+  }
+
+  &.fc-list-event {
+    &:hover td {
+      background: rgba(#f2f2f2, 0.1) !important;
+    }
+
+    .fc-list-event-title {
+      color: #c8d1ed !important;
+    }
+  }
+}

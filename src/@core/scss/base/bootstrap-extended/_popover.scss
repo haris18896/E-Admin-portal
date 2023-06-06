@@ -1,0 +1,57 @@
+// Popovers
+
+.popover {
+  max-height: 75vh !important;
+  // overflow-y: scroll !important;
+  // overflow-x: hidden !important;
+  max-width: 30rem;
+  box-shadow: $popover-box-shadow;
+  // popover header style
+  .popover-header {
+    background: #6580AF !important;
+    @include font-size(1.07rem);
+    border: 1px solid #6580AF;
+  }
+  // popover body style
+  .popover-body {
+    padding: 1rem 0rem !important;
+    border: 1px solid $popover-border-color;
+    border-top-color: $popover-bg;
+    border-bottom-left-radius: $popover-border-radius;
+    border-bottom-right-radius: $popover-border-radius;
+  }
+  // popover bottom arrow color like header
+  &.bs-popover-bottom {
+    .popover-arrow:after {
+      border-bottom-color: $popover-header-bg;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .popover{
+    max-width: 20rem;
+  }
+}
+// To set arrow border as we have added border to popover-body and popover-header
+.bs-popover-top {
+  > .popover-arrow {
+    &::after {
+      bottom: $popover-border-width + 1px;
+    }
+  }
+}
+.bs-popover-end {
+  > .popover-arrow {
+    &::after {
+      left: $popover-border-width + 1px;
+    }
+  }
+}
+.bs-popover-start {
+  > .popover-arrow {
+    &::after {
+      right: $popover-border-width + 1px;
+    }
+  }
+}

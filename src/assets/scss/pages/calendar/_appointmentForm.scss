@@ -1,0 +1,87 @@
+.Appointment_Form {
+  overflow-x: hidden !important;
+  & button {
+    padding: 0.5rem 2rem !important;
+    font-size: $font-size-md !important;
+  }
+
+  &--date-time {
+    &__date {
+      @include breakpoint-up(xxSmall) {
+        max-width: 300px;
+      }
+    }
+
+    &__time {
+      &--start {
+        margin-bottom: 1rem;
+      }
+      &--end {
+        margin-bottom: 1rem;
+      }
+      @include breakpoint-up(xxSmall) {
+        @include flex-between-start;
+        @include flex-row;
+        &--start {
+          margin-right: 1rem;
+        }
+        &--duration {
+          margin-right: 1rem;
+        }
+        &--end {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  &--location {
+    &__venue {
+      @include breakpoint-up(xxSmall) {
+        max-width: 300px;
+      }
+    }
+  }
+
+  &--actions {
+    & button {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    @include breakpoint-up(xxSmall) {
+      @include flex-between-start;
+      @include flex-row;
+      & button {
+        margin-bottom: 0 !important;
+
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  &--roomCost {
+    @include flex-between-center;
+    margin-bottom: 1rem;
+    padding: 0 !important;
+
+    & h5 {
+      padding-left: 1.421rem;
+      font-weight: 700;
+    }
+
+    & p {
+      padding: 0.3rem 2.5rem 0.3rem 1rem;
+      background-color: $ethera-show;
+      font-weight: 700;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+}
+

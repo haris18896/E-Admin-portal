@@ -1,0 +1,67 @@
+// margin-left
+@mixin leftMargins {
+  @for $i from 1 through 15 {
+    .ml-#{$i} {
+      margin-left: $i * 1rem !important;
+    }
+  }
+}
+
+// padding-left
+@mixin leftPaddings {
+  @for $i from 1 through 15 {
+    .pl-#{$i} {
+      padding-left: $i * 1rem !important;
+    }
+  }
+}
+
+// padding-left2
+@mixin PaddingsLeft {
+  @for $i from 1 through 100 {
+    .p-l-#{$i} {
+      padding-left: $i * 1px !important;
+    }
+  }
+}
+
+@mixin minHeight {
+  @for $i from 1 through 20 {
+    .min-h-#{$i} {
+      min-height: $i * 10px !important;
+    }
+  }
+}
+
+@mixin marginBottom {
+  @for $i from 0 through 100 {
+    .m-b-#{$i} {
+      margin-bottom: $i * 1px !important;
+    }
+  }
+}
+
+@mixin marginTop {
+  @for $i from 0 through 100 {
+    .m-t-#{$i} {
+      margin-top: $i * 1px !important;
+    }
+  }
+}
+
+@mixin paddingHorizontal {
+  @for $i from 0 through 100 {
+    .p-x-#{$i} {
+      padding-left: $i * 1px !important;
+      padding-right: $i * 1px !important;
+    }
+  }
+}
+
+// Execute the mixins
+@include minHeight;
+@include marginTop;
+@include leftMargins;
+@include leftPaddings;
+@include marginBottom;
+@include PaddingsLeft;

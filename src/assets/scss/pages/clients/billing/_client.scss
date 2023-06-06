@@ -1,0 +1,88 @@
+.right-row-client-billing {
+  justify-content: flex-end;
+}
+
+.dropDown-popover {
+  min-width: 150px;
+
+  & ul {
+    margin: 0;
+    padding: 0 0 0 0.7rem;
+    list-style: none;
+
+    & li {
+      padding: 0.4rem;
+      margin-bottom: 0.4rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.actions-new-invoice {
+  margin-left: auto;
+}
+
+.Row-styling {
+  & svg {
+    cursor: pointer;
+  }
+
+  &__text-new-invoice {
+    display: none !important;
+  }
+
+  &__actions-new-invoice {
+    display: flex;
+    align-items: center;
+    float: right;
+    & button {
+      margin-left: 1rem;
+    }
+
+    & div {
+      padding: 5px 10px;
+      background: $white;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 50px;
+    }
+  }
+}
+
+.new_invoice_form {
+  @include breakpoint-up(xxxSmall) {
+    padding: 1rem 2rem;
+  }
+  &--heading {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &--flatPickr {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    & p {
+      margin-right: 30px;
+    }
+  }
+
+  &--total {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem;
+
+    & div {
+      @include flex-between-center;
+
+      @include breakpoint-up(xxxSmall) {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+    }
+
+    & span {
+      font-size: 36px;
+      font-weight: bold;
+    }
+  }
+}
